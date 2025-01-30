@@ -1,7 +1,7 @@
 import './Bottle.css'
 
-const Bottle = ({bottle}) => {
-    console.log(bottle);
+const Bottle = ({bottle, handleAddToChart}) => {
+    // console.log(bottle);
 
     const {name, img, price} = bottle;
 
@@ -10,6 +10,7 @@ const Bottle = ({bottle}) => {
             <h3>Botttle: {name}</h3>
             <img src={img} alt="" />
             <p>Price: $ {price}</p>
+            <button onClick={() => handleAddToChart(bottle)}>Purchase</button>
         </div>
     );
 };
